@@ -4,62 +4,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgroForte | Futuro Sustentável</title>
+    <title>AgroForte | Sustentabilidade e Produção</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header id="header">
+    <header id="navbar">
         <nav class="container">
             <div class="logo">Agro<span>Forte</span></div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#sobre">Sustentabilidade</a></li>
-                <li><a href="#tecnologia">Tecnologia</a></li>
+            <ul class="nav-menu">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#pilares">Pilares</a></li>
+                <li><a href="#sobre">Inovação</a></li>
                 <li><a href="#contato" class="btn-nav">Contato</a></li>
             </ul>
-            <div class="menu-toggle">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
         </nav>
     </header>
 
     <section id="home" class="hero">
-        <div class="hero-content container">
-            <h1>Equilíbrio entre a <span>Produção</span> e o <span>Meio Ambiente</span></h1>
-            <p>Inovação tecnológica a serviço da terra para um amanhã mais verde e produtivo.</p>
-            <a href="#sobre" class="btn-main">Saiba Mais</a>
+        <div class="container hero-text">
+            <h1>O Futuro do Campo é <span>Sustentável</span></h1>
+            <p>Unindo a força da produção brasileira com o respeito absoluto ao meio ambiente.</p>
+            <div class="hero-btns">
+                <a href="#pilares" class="btn-primary">Nossa Visão</a>
+                <a href="#" class="btn-secondary">Projetos 2026</a>
+            </div>
         </div>
     </section>
 
-    <section id="sobre" class="container section">
+    <section id="pilares" class="container section">
         <div class="section-title">
-            <h2>Nossos Pilares</h2>
-            <p>O futuro do agronegócio depende da harmonia com a natureza.</p>
+            <h2>Equilíbrio Necessário</h2>
+            <p>Como garantimos a produção sem comprometer o amanhã.</p>
         </div>
         <div class="grid-cards">
             <div class="card">
-                <h3>Preservação</h3>
-                <p>Gestão eficiente de recursos hídricos e recuperação de áreas degradadas.</p>
+                <div class="icon">🌱</div>
+                <h3>Recuperação</h3>
+                <p>Técnicas de manejo que regeneram o solo e aumentam a biodiversidade local.</p>
             </div>
             <div class="card">
-                <h3>Produtividade</h3>
-                <p>Maximização de colheitas com o uso inteligente de bioinsumos.</p>
+                <div class="icon">💧</div>
+                <h3>Gestão Hídrica</h3>
+                <p>Sistemas de irrigação inteligentes que reduzem o desperdício de água em até 40%.</p>
             </div>
             <div class="card">
+                <div class="icon">🛰️</div>
                 <h3>Tecnologia</h3>
-                <p>Monitoramento via satélite e drones para precisão cirúrgica no campo.</p>
+                <p>Monitoramento via satélite para garantir o desmatamento zero em nossas cadeias.</p>
             </div>
         </div>
     </section>
 
-    <footer id="contato">
-        <div class="container">
-            <p>&copy; 2026 AgroForte - Futuro Sustentável. Todos os direitos reservados.</p>
-        </div>
+    <footer>
+        <p>&copy; 2026 AgroForte Sustentável - Produzir para Alimentar, Preservar para Existir.</p>
     </footer>
 
     <script src="script.js"></script>
