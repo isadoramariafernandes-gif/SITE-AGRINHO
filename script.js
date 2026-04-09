@@ -1,39 +1,44 @@
 
-// Menu Mobile Toggle
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
-
-hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
-    navMenu.classList.toggle("active");
+// Efeito de transparência no Navbar ao rolar a página
+window.addEventListener('scroll', function() {
+    const navbar = document.getElementById('navbar');
+    if (window.scrollY > 50) {
+        navbar.style.padding = '10px 0';
+        navbar.style.background = '#ffffff';
+    } else {
+        navbar.style.padding = '20px 0';
+    }
 });
 
-// Fechar menu ao clicar em um link (Mobile)
-document.querySelectorAll(".nav-menu a").forEach(n => n.addEventListener("click", () => {
-    hamburger.classList.remove("active");
-    navMenu.classList.remove("active");
-}));
+// Manipulação do Formulário
+const form = document.getElementById('agroForm');
 
-// Scroll Suave para os links internos
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Simulação de envio
+    const btn = document.querySelector('.btn-submit');
+    const originalText = btn.innerText;
+    
+    btn.innerText = "Enviando...";
+    btn.style.background = "#d4a373";
+    btn.disabled = true;
+
+    setTimeout(() => {
+        alert('Obrigado! Sua mensagem foi enviada. Juntos pelo agro sustentável.');
+        btn.innerText = originalText;
+        btn.style.background = "#8bc34a";
+        btn.disabled = false;
+        form.reset();
+    }, 2000);
+});
+
+// Scroll Suave para links internos
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            window.scrollTo({
-                top: target.offsetTop - 80,
-                behavior: 'smooth'
-            });
-        }
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
     });
-});
-
-// Efeito de sombra no header ao rolar
-window.addEventListener('scroll', () => {
-    const header = document.querySelector('#navbar');
-    if (window.scrollY > 50) {
-        header.style.padding = "5px 0";
-    } else {
-        header.style.padding = "15px 0";
-    }
 });
