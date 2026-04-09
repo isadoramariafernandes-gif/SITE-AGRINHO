@@ -1,32 +1,39 @@
 
-// Efeito de rolagem suave para os links do menu
+// Menu Mobile Toggle
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+});
+
+// Fechar menu ao clicar em um link (Mobile)
+document.querySelectorAll(".nav-menu a").forEach(n => n.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+}));
+
+// Scroll Suave para os links internos
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            window.scrollTo({
+                top: target.offsetTop - 80,
+                behavior: 'smooth'
+            });
+        }
     });
 });
 
-// Alterar cor do header ao rolar a página
-const header = document.getElementById('header');
-
+// Efeito de sombra no header ao rolar
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 100) {
-        header.style.padding = "0.5rem 0";
-        header.style.background = "#ffffff";
+    const header = document.querySelector('#navbar');
+    if (window.scrollY > 50) {
+        header.style.padding = "5px 0";
     } else {
-        header.style.padding = "1rem 0";
+        header.style.padding = "15px 0";
     }
-});
-
-// Logica simples para menu mobile (Toggle)
-const mobileMenu = document.getElementById('mobile-menu');
-const navLinks = document.querySelector('.nav-links');
-
-mobileMenu.addEventListener('click', () => {
-    // Aqui você pode adicionar uma classe 'active' para mostrar o menu no CSS
-    alert("Funcionalidade de menu mobile ativada!");
 });
