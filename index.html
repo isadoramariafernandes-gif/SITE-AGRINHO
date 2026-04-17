@@ -4,63 +4,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agro Forte | Futuro Sustentável</title>
+    <title>Agro Sustentável | Futuro Equilibrado</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <header id="header">
-        <nav class="container">
-            <div class="logo">Agro<span>Forte</span></div>
-            <ul class="nav-links">
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#missao">Missão</a></li>
-                <li><a href="#tecnologia">Tecnologia</a></li>
-                <li><a href="#contato" class="btn-nav">Fale Conosco</a></li>
-            </ul>
-            <div class="menu-toggle">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-        </nav>
+    <header id="navbar">
+        <div class="container">
+            <h1 class="logo">Agro<span>Forte</span></h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#missao">Missão</a></li>
+                    <li><a href="#tecnologia">Tecnologia</a></li>
+                    <li><a href="#contato" class="btn-nav">Fale Conosco</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <section id="hero">
-        <div class="hero-content container">
-            <h1>Equilíbrio entre Produção e Meio Ambiente</h1>
-            <p>Cultivando o amanhã com tecnologia de ponta e respeito à biodiversidade.</p>
-            <a href="#missao" class="btn-main">Saiba Mais</a>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Produzir para Nutrir, <br>Preservar para Existir.</h2>
+            <p>O equilíbrio perfeito entre a alta produtividade do campo e a regeneração do meio ambiente.</p>
+            <a href="#missao" class="btn-main">Conheça nossa visão</a>
         </div>
     </section>
 
-    <section id="missao" class="container">
-        <div class="section-title">
-            <h2>Nossos Pilares</h2>
-            <div class="underline"></div>
+    <section id="missao" class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Pilares da Sustentabilidade</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="grid">
+                <div class="card">
+                    <div class="icon">🌱</div>
+                    <h3>Solo Vivo</h3>
+                    <p>Técnicas de plantio direto e rotação de culturas para manter a saúde da terra.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">💧</div>
+                    <h3>Gestão Hídrica</h3>
+                    <p>Irrigação inteligente e preservação de nascentes para o uso consciente da água.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">🛰️</div>
+                    <h3>Agro 5.0</h3>
+                    <p>Monitoramento via satélite e IA para reduzir desperdícios e otimizar a colheita.</p>
+                </div>
+            </div>
         </div>
-        <div class="cards">
-            <div class="card">
-                <div class="icon">🌱</div>
-                <h3>Preservação</h3>
-                <p>Manejo consciente para manter a saúde do solo e das nascentes.</p>
-            </div>
-            <div class="card">
-                <div class="icon">🚜</div>
-                <h3>Produtividade</h3>
-                <p>Otimização de recursos para alimentar o mundo com eficiência.</p>
-            </div>
-            <div class="card">
-                <div class="icon">🛰️</div>
-                <h3>Inovação</h3>
-                <p>Monitoramento via satélite e drones para precisão máxima.</p>
-            </div>
+    </section>
+
+    <section id="contato" class="contact">
+        <div class="container">
+            <h2>Junte-se à Revolução Verde</h2>
+            <form id="agroForm">
+                <input type="text" placeholder="Seu Nome" required>
+                <input type="email" placeholder="Seu E-mail" required>
+                <textarea placeholder="Como podemos ajudar no seu projeto sustentável?"></textarea>
+                <button type="submit" class="btn-submit">Enviar Mensagem</button>
+            </form>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Agro Forte Sustentável. O futuro nasce aqui.</p>
+        <p>&copy; 2024 AgroForte Sustentável - Cultivando o amanhã hoje.</p>
     </footer>
 
     <script src="script.js"></script>
